@@ -1,0 +1,23 @@
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-card *ngFor="let showing of showings" (click)="goToFilmInfoByTitle(showing.title)">
+      <ion-card-header>
+        <ion-card-title class="ion-text-center">{{showing.title}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-grid fixed>
+          <ion-row>
+            <ion-col size="3">
+              <ion-img src="{{showing.img}}"></ion-img>
+            </ion-col>
+            <ion-col size="9">
+              <ion-label>{{showing.address}}</ion-label><br>
+              <ion-label>{{showing.date}}</ion-label><br>
+              <ion-label>{{showing.time}}</ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-grid>  
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

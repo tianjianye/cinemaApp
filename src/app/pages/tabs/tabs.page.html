@@ -1,0 +1,35 @@
+<ion-tabs>
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="primary" (click)="goToAccountPage()">
+        <ion-text color="primary">
+          <div style="max-width: calc(25vw); float:right; white-space: nowrap; overflow: hidden; text-overflow : ellipsis">
+            {{userInfo?.name}}
+          </div>
+        </ion-text>
+        <ion-button routerDirection="forward"> 
+          <ion-icon name="person-circle"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>CineGo</ion-title>
+    </ion-toolbar>
+  </ion-header> 
+  
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="group">
+      <ion-icon name="people"></ion-icon>
+      <ion-label>Group</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="agenda">
+      <ion-icon name="calendar"></ion-icon>
+      <ion-label>Agenda</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>

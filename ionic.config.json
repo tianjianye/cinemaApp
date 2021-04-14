@@ -1,0 +1,7 @@
+{
+  "name": "cinemaApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
