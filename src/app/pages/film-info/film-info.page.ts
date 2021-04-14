@@ -19,5 +19,4 @@ export class FilmInfoPage implements OnInit {
   ngOnInit() {
     this.ionViewDidEnter();
   }
-  sortNull(){}
 }

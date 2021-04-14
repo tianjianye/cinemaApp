@@ -27,5 +27,4 @@ export class AccountPage implements OnInit {
     window.sessionStorage.clear();
     this.router.navigateByUrl('login').then();
   }
-  sortNull() {}
 }
