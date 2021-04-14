@@ -14,9 +14,6 @@ export class TabsPage {
     this.userInfo = JSON.parse(window.sessionStorage.getItem('currentUser'));
   }
   goToAccountPage(){
-    this.router.navigateByUrl('account').then(() => {
-      console.log(this.userInfo);
-      console.log('account page');
-    });
+    this.router.navigateByUrl('account').then();
   }
 }
