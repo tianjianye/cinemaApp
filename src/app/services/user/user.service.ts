@@ -20,7 +20,7 @@ export class UserService {
     console.log(user);
     this.result = user;
     this.setUser();
-    this.router.navigateByUrl('home').then();
+    this.router.navigateByUrl('tabs/home').then();
   }
   
   setUser(){
@@ -32,7 +32,7 @@ export class UserService {
       this.result = res.filter(c => c.name === name).filter(c => c.password === password)[0];
       if (this.result !== null && this.result !== undefined){
         this.setUser();
-        this.router.navigateByUrl('home').then();
+        this.router.navigateByUrl('tabs/home').then();
       } else{
       alert('Invalid name or password: Please try again');
         window.sessionStorage.clear();

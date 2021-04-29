@@ -21,9 +21,9 @@ export class LoginPage implements OnInit {
               private userService: UserService
               ) {}
   ngOnInit() {
-    this.ionViewDidEnter();
+    this.ionViewWillEnter();
   }
-  ionViewDidEnter() {
+  ionViewWillEnter() {
     sessionStorage.clear();
     this.name = '';
     this.password = '';
