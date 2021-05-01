@@ -1,1 +1,1 @@
-# cinemaApp
+# ionic-cinema-app
