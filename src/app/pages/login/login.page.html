@@ -5,21 +5,31 @@
 </ion-header>
 
 <ion-content>
-  <form (ngSubmit)="logForm()">
-    <ion-item>
-      <ion-label>Name</ion-label>
-      <ion-input autocomplete type="text" [(ngModel)]="name" name="name"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Password</ion-label>
-      <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
-    </ion-item>
-    <ion-grid fixed>
-      <ion-row>
-        <ion-col size="6"><ion-button type="button" expand="block" (click)="signIn()">Sign In</ion-button></ion-col>
-        <ion-col size="6"><ion-button type="submit" expand="block">Login</ion-button></ion-col>
-      </ion-row>
-    </ion-grid>
-  </form>
-  <ion-text>name:admin, password: admin</ion-text>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size-md="8" offset-md="2">
+        <ion-card>
+          <ion-card-content>
+            <form (ngSubmit)="logForm()">
+              <ion-item>
+                <ion-label>Name</ion-label>
+                <ion-input autocomplete type="text" [(ngModel)]="name" name="name"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label>Password</ion-label>
+                <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
+              </ion-item>
+              <ion-grid fixed>
+                <ion-row>
+                  <ion-col size="6"><ion-button type="button" expand="block" (click)="signIn()">Sign In</ion-button></ion-col>
+                  <ion-col size="6"><ion-button type="submit" expand="block">Login</ion-button></ion-col>
+                </ion-row>
+              </ion-grid>
+            </form>
+            <ion-text>name:admin, password: admin</ion-text>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid> 
 </ion-content>

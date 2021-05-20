@@ -12,8 +12,8 @@ const routes: Routes = [
         loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
       },
       {
-        path: 'group',
-        loadChildren: () => import('../group/group.module').then(m => m.GroupPageModule)
+        path: 'groups',
+        loadChildren: () => import('../groups/groups.module').then(m => m.GroupsPageModule)
       },
       {
         path: 'agenda',

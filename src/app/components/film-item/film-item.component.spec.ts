@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { GroupPage } from './group.page';
+import { FilmItemComponent } from './film-item.component';
 
-describe('GroupPage', () => {
-  let component: GroupPage;
-  let fixture: ComponentFixture<GroupPage>;
+describe('FilmItemComponent', () => {
+  let component: FilmItemComponent;
+  let fixture: ComponentFixture<FilmItemComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GroupPage ],
+      declarations: [ FilmItemComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(GroupPage);
+    fixture = TestBed.createComponent(FilmItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

@@ -28,9 +28,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/account-update/account-update.module').then( m => m.AccountUpdatePageModule)
   },
   {
-    path: 'film-info',
-    loadChildren: () => import('./pages/film-info/film-info.module').then( m => m.FilmInfoPageModule)
+    path: 'film/:id',
+    loadChildren: () => import('./pages/film/film.module').then( m => m.FilmPageModule)
+  },
+  {
+    path: 'group/:id',
+    loadChildren: () => import('./pages/group/group.module').then( m => m.GroupPageModule)
   }
+
 ];
 @NgModule({
   imports: [
