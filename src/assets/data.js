@@ -152,7 +152,7 @@ export const groups = [
                 "id": 503
             }
         ],
-        "img": "https://cdn.iconscout.com/icon/premium/png-256-thumb/superman-1912328-1623451.png"
+        "img": "https://upload.wikimedia.org/wikipedia/commons/1/1c/DC_Comics_logo.png"
     },
     {
         "id": 402,
@@ -176,7 +176,7 @@ export const groups = [
                 "id": 506
             }
         ],
-        "img": "https://cdn.iconscout.com/icon/free/png-512/marvel-282124.png"
+        "img": "https://cdn.1min30.com/wp-content/uploads/2018/07/marvel-logo-hd.jpg"
     },
     {
         "id": 403,
@@ -194,6 +194,6 @@ export const groups = [
                 "id": 505
             }
         ],
-        "img": "https://cdn.iconscout.com/icon/free/png-256/disney-282116.png"
+        "img": "https://d1fmx1rbmqrxrr.cloudfront.net/cnet/optim/i/edit/2020/04/heros-disney770__w770.jpg"
     }
 ];

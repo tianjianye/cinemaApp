@@ -3,9 +3,11 @@
     <ion-grid>
       <ion-row class="ion-align-items-center">
         <ion-col size-xs="2" size-md="1">
-          <ion-img src="{{group.img}}"></ion-img>
+          <ion-avatar>
+            <img src="{{group.img}}">
+          </ion-avatar>
         </ion-col>
-        <ion-col size-xs="9" offset-xs="1" size-md="11">
+        <ion-col size-xs="9" offset-xs="1" size-md="10" offset-md="1">
           <ion-card-title class="ion-text-center">{{group.name}}</ion-card-title>
           <ion-card-subtitle>{{group.members.length}} Members</ion-card-subtitle>
           <ion-card-subtitle>{{group.events.length}} Events</ion-card-subtitle>
