@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import {Router} from '@angular/router';
+import {FormBuilder} from '@angular/forms';
 import {UserService} from '../../services/user/user.service';
-// import {RestaurantsService} from '../services/restaurants/restaurants.service';
-// import {OrdersService} from '/services/orders/orders.service';
 
 @Component({
   selector: 'app-login',
@@ -12,12 +10,13 @@ import {UserService} from '../../services/user/user.service';
 })
 export class LoginPage implements OnInit {
 
-  loginForm: FormGroup;
+  // loginForm: FormGroup;
   name: any;
   password: any;
   userInfo: any;
-  
-  constructor(public route: ActivatedRoute, private fb: FormBuilder,
+  showPassword = false;
+  passwordToggleIcon = 'eye';
+  constructor(public route: Router, private fb: FormBuilder,
               private userService: UserService
               ) {}
   ngOnInit() {
@@ -29,18 +28,20 @@ export class LoginPage implements OnInit {
     this.password = '';
   }
   logForm() {
-    this.buildLoginForm();
-    this.userService.login(this.loginForm.value.name,this.loginForm.value.password);
+    this.userService.login(this.name,this.password);
   }
   signIn(){
-    this.buildLoginForm();
-    this.userService.signUp(this.loginForm.value.name,this.loginForm.value.password);
+    this.route.navigateByUrl("sign-up");
   }
-  buildLoginForm() {
-    this.loginForm = this.fb.group({
-          name: [this.name],
-          password: [this.password],
-        }
-    );
+
+  togglePassword() {
+    this.showPassword = !this.showPassword;
+    if (this.passwordToggleIcon === 'eye'){
+      this.passwordToggleIcon = 'eye-off';
+    }
+    else{
+      this.passwordToggleIcon = 'eye'
+    }
   }
+
 }

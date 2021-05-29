@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Login</ion-title>
+    <ion-title>Sign Up</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -16,13 +16,15 @@
               </ion-item>
               <ion-item>
                 <ion-label>Password</ion-label>
-                <ion-input [type]="showPassword ? 'text' : 'password' " placeholder="Password" [(ngModel)]="password" name="password"></ion-input>
-                <ion-icon slot="end" [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>
+                <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label>Confirm Password</ion-label>
+                <ion-input type="password" [(ngModel)]="confirm-password" name="confirm-password"></ion-input>
               </ion-item>
               <ion-grid fixed>
                 <ion-row>
                   <ion-col size="6"><ion-button type="button" expand="block" (click)="signIn()">Sign In</ion-button></ion-col>
-                  <ion-col size="6"><ion-button type="submit" expand="block" (click)="logForm()">Login</ion-button></ion-col>
                 </ion-row>
               </ion-grid>
             <ion-text>name:admin, password: admin</ion-text>
@@ -32,3 +34,4 @@
     </ion-row>
   </ion-grid> 
 </ion-content>
+
