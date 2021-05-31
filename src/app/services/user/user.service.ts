@@ -25,25 +25,13 @@ export class UserService {
 
   login(name: string, password: string){
     let user = users.filter(res=>res.name === name).filter(res=>res.password === password)[0];
-    console.log(user)
     if(user){
       this.setUser(user);
       this.router.navigateByUrl('tabs/home').then();
     }
     else{
-      alert('Invalid name or password: Please try again');
+      alert('Invalid name or password: Please try again!');
       window.sessionStorage.clear();
     }
-    // this.httpClient.get<any[]>(URL_USERS).pipe().subscribe(res=>{
-    //   this.result = res.filter(c => c.name === name).filter(c => c.password === password)[0];
-    //   if (this.result !== null && this.result !== undefined){
-    //     this.setUser();
-    //     this.router.navigateByUrl('tabs/home').then();
-    //   } else{
-    //   alert('Invalid name or password: Please try again');
-    //     window.sessionStorage.clear();
-    //   }
-    // });
-
   }
 }

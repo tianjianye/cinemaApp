@@ -2,8 +2,14 @@
   <ion-list>
     <ion-grid fixed>
       <ion-row>
-        <ion-col size-xs="12">
-          <app-film-item *ngFor="let showing of showings" [showing] = "showing"></app-film-item>
+        <ion-searchbar [(ngModel)]="searchQuery" (ionInput)="search($event)"></ion-searchbar>
+        <ion-col size-xs="12" size-md="4" *ngFor="let film of films">
+          <ion-card (click)="goToFilmPage(film.id)">
+            <ion-card-header>
+              <ion-img style="height: 200px;" src="{{film.img}}"></ion-img>
+              <ion-card-title style="height: 50px;" class="ion-text-center">{{film.title|uppercase}}</ion-card-title>
+            </ion-card-header>
+          </ion-card>
         </ion-col>
       </ion-row>
     </ion-grid>

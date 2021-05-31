@@ -16,9 +16,7 @@ export class GroupsPage {
   ngOnInit() {
     this.ionViewDidEnter();
   }
-  goToGroup(id:number){
-    this.groupService.getGroupById(id);
-    this.router.navigateByUrl('group').then();
+  goToGroupPage(id: number){
+    this.router.navigate(['group',id]);
   }
-  
 }

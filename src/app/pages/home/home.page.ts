@@ -1,4 +1,6 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { FilmService } from 'src/app/services/film/film.service';
 import { ShowingService } from 'src/app/services/showing/showing.service';
 
 @Component({
@@ -8,12 +10,31 @@ import { ShowingService } from 'src/app/services/showing/showing.service';
 })
 
 export class HomePage {
-  showings: any;
-  constructor(private showingService: ShowingService) {}
+  results: any=[];
+  films: any;
+  constructor(private showingService: ShowingService, private filmService: FilmService, private router: Router) {}
   ionViewDidEnter(){
-    this.showings = this.showingService.getAllShowings();
+    this.films = this.filmService.getAllFilms();
   }
   ngOnInit() {
     this.ionViewDidEnter();
+  }
+  search(event:any){
+    const query = event.target.value.toLowerCase();
+    this.results=[];
+    this.films = this.filmService.getAllFilms();
+    if(query!==""){
+      this.films.forEach(item => {
+        const film = this.filmService.getFilmById(item.id)
+        const shouldShow = film.title.toLowerCase().indexOf(query);
+        if(shouldShow>-1){
+          this.results.push(item);
+        }
+      });
+      this.films = this.results;
+    }
+  }
+  goToFilmPage(id: number){
+    this.router.navigate(['film',id]);
   }
 }

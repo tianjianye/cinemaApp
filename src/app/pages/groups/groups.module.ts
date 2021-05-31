@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { GroupsPage } from './groups.page';
 
 import { GroupsPageRoutingModule } from './groups-routing.module';
-import { GroupItemComponent } from 'src/app/components/group-item/group-item.component';
 
 @NgModule({
   imports: [
@@ -14,6 +13,6 @@ import { GroupItemComponent } from 'src/app/components/group-item/group-item.com
     FormsModule,
     GroupsPageRoutingModule
   ],
-  declarations: [GroupsPage, GroupItemComponent]
+  declarations: [GroupsPage]
 })
 export class GroupsPageModule {}
