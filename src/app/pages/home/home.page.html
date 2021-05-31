@@ -2,7 +2,7 @@
   <ion-list>
     <ion-grid fixed>
       <ion-row>
-        <ion-searchbar [(ngModel)]="searchQuery" (ionInput)="search($event)"></ion-searchbar>
+        <ion-searchbar (ionInput)="search($event)"></ion-searchbar>
         <ion-col size-xs="12" size-md="4" *ngFor="let film of films">
           <ion-card (click)="goToFilmPage(film.id)">
             <ion-card-header>

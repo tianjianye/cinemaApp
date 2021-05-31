@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FilmService } from 'src/app/services/film/film.service';
-import { ShowingService } from 'src/app/services/showing/showing.service';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +11,7 @@ import { ShowingService } from 'src/app/services/showing/showing.service';
 export class HomePage {
   results: any=[];
   films: any;
-  constructor(private showingService: ShowingService, private filmService: FilmService, private router: Router) {}
+  constructor(private filmService: FilmService, private router: Router) {}
   ionViewDidEnter(){
     this.films = this.filmService.getAllFilms();
   }
