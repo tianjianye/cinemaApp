@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-import {FormBuilder} from '@angular/forms';
 import {UserService} from '../../services/user/user.service';
 
 @Component({
@@ -16,8 +15,7 @@ export class LoginPage implements OnInit {
   userInfo: any;
   showPassword = false;
   passwordToggleIcon = 'eye';
-  constructor(public route: Router, private fb: FormBuilder,
-              private userService: UserService
+  constructor(public route: Router, private userService: UserService
               ) {}
   ngOnInit() {
     this.ionViewWillEnter();
